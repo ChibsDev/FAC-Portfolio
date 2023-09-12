@@ -1,0 +1,106 @@
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+
+:root {
+    --light-black:#181719;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+max-width: 1440px;
+min-width: 375px;
+
+min-height: 100vh;
+margin: 0 auto;
+font-family: 'Futura PT', sans-serif;
+background: linear-gradient(to top, #ECECEB 0%, #F2F3F2 30%, white 100%);
+border: 1px solid red;
+}
+
+                                   /* SOCIAL MEDIA ICON BAR */
+
+
+
+
+    .social-icon-bar {
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    animation: fadeIn ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+    /* display: none; */
+    
+    }
+
+    .social-icon-bar a {
+    animation-delay: 10s;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: black;
+    border-radius: 3px;
+    }
+    
+    
+    .social-icon-bar a:hover {
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.2);
+    }
+
+    .social-icon-bar a:active {
+    background-color: #969595;
+    box-shadow: none;
+    }
+
+
+header {
+    background-color: var(--light-black);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted black;
+}
+
+.centered {
+    text-align: center;
+}
+
+
