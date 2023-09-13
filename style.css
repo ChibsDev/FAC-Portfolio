@@ -103,4 +103,71 @@ section {
     text-align: center;
 }
 
+.hero-message {
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border: 1px dotted blue;
+    margin: 0 auto;
+  }
+  
+  .scroll-div {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid red;
+  }
+  
+  
+  .hero-message h1,
+  .hero-message h3 {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+    .hero-message h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  .hero-message h1.fade-in {
+    opacity: 1;
+    
+  }
+  
+  .hero-message h1.fade-out {
+    opacity: 0;
+  }
+
+
+  #subMessage {
+    margin-top: 5em;
+  }
+  
+  
+  #subMessage.drop-in {
+    opacity: 1;
+    animation: drop-in 1s ease 200ms backwards;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+   }
+  
+   @keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-30px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+
 
