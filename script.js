@@ -33,3 +33,33 @@ function animateHeroMessages() {
   }
   
   window.onload = animateHeroMessages;
+
+
+  /////////////////PROJECTS
+
+const filterButtons = document.querySelectorAll(".filter-button");
+
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filterValue = button.getAttribute("data-filter");
+
+        const gridItems = document.querySelectorAll(".grid-item");
+        
+        gridItems.forEach((item) => {
+            item.style.display = "none";
+        });
+
+        if (filterValue === "all") {
+            gridItems.forEach((item) => {
+              // add animation
+                item.style.display = "block";
+            });
+        } else {
+            const filteredItems = document.querySelectorAll(`.grid-item.${filterValue}`);
+            filteredItems.forEach((item) => {
+              //add animation 
+                item.style.display = "block";
+            });
+        }
+    });
+});
