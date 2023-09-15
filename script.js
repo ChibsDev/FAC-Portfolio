@@ -44,7 +44,6 @@ filterButtons.forEach((button) => {
         const filterValue = button.getAttribute("data-filter");
 
         const gridItems = document.querySelectorAll(".grid-item");
-        
         gridItems.forEach((item) => {
             item.style.display = "none";
         });

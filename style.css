@@ -20,7 +20,7 @@ min-height: 100vh;
 margin: 0 auto;
 font-family: 'Futura PT', sans-serif;
 background: linear-gradient(to top, #ECECEB 0%, #F2F3F2 30%, white 100%);
-border: 1px solid red;
+/* border: 1px solid red; */
 }
 
                                    /* SOCIAL MEDIA ICON BAR */
@@ -74,10 +74,13 @@ header {
 }
 
 nav ul {
+    width: 80%;
+    margin: 0 auto;
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     padding: 1rem 0;
+   
 }
 
 nav li {
@@ -97,7 +100,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dotted black;
+    /* border: 0.5px dotted grey; */
 }
 
 
@@ -113,7 +116,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 1px dotted blue;
+    /* border: 1px dotted blue; */
     /* margin: 0 auto; */
   }
   
@@ -121,7 +124,7 @@ section {
     width: 100%;
     text-align: center;
     overflow: hidden;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   
   
@@ -169,10 +172,94 @@ section {
     to {
      opacity: 1;
      transform: translate(0px);
+     
     }
    }
 
 
+                                                    /* HOME SECTION */
+  #home {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .home-text {
+    margin: auto;
+    max-width: 650px;
+    min-width: 225px;
+}
+
+.home-text h1 {
+  min-width: 210px;
+  max-width: 650px;
+  font-size: 6vw;
+  margin: 0.2em 0;
+  word-wrap:break-word;
+  /* animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;  */
+  
+}
+
+.home-text h3,
+.home-text p {
+  font-size: 2vw; 
+}
+
+
+.home-text p {
+  min-width: 16px;
+  max-width: 400px;
+  /* animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; */
+}
+
+.home-img {
+  max-width: 400px; 
+  display: flex;
+  align-items: center;
+}
+
+
+.home-img img {
+  width: 100%;
+    display: block;
+}
+
+
+#home-contact-btn {
+    height: 50px;
+    /* border: 1px solid black; */
+    color: black;
+    background-color: white;
+    padding: 0 30px;
+    border-radius: 7px;
+    margin: 2em 0 ;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 0.2); 
+    overflow: hidden;
+}
+
+#home-contact-btn:hover {
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+
+
+                                                   /*ABOUT SECTION   */
+
+  .about-text {
+    width: 90%;
+    margin: 5em auto;
+    border-radius: 7px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 0.2); 
+    padding: 2em;
+  }
 
                                                  /* PROJECTS SECTION */
 
@@ -204,7 +291,7 @@ color: inherit;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .grid-item {
