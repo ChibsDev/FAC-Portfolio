@@ -19,7 +19,7 @@ min-width: 375px;
 min-height: 100vh;
 margin: 0 auto;
 font-family: 'Futura PT', sans-serif;
-background: linear-gradient(to top, #ECECEB 0%, #F2F3F2 30%, white 100%);
+background: white;
 /* border: 1px solid red; */
 }
 
@@ -252,13 +252,81 @@ section {
 
 
                                                    /*ABOUT SECTION   */
+  #about {
+    display: block;
+  }
 
   .about-text {
-    width: 90%;
+    width: 100%;
     margin: 5em auto;
-    border-radius: 7px;
+    border-radius: 15px;
     box-shadow: 0 2px 3px rgb(0 0 0 / 0.2); 
     padding: 2em;
+  }
+
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .skill-icons {
+    overflow: hidden;
+    padding: 30px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+  }
+  
+  .skill-icons:before,
+  .skill-icons:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .skill-icons:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .skill-icons:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .skill-icons:hover .skill-icons-slide {
+    animation-play-state: paused;
+  }
+  
+  .skill-icons-slide {
+    display: flex;
+    animation: 35s slide infinite linear;
+    height: 100%;
+  }
+  
+  .skill-icons-slide li {
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    margin: 0 40px;
+  }
+  
+  .skill-icons-slide li i {
+      font-size: 80px;
+      color: black; 
   }
 
                                                  /* PROJECTS SECTION */
