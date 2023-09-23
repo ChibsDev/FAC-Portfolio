@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/futura-pt');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --light-black:#181719;
@@ -18,8 +18,9 @@ min-width: 375px;
 
 min-height: 100vh;
 margin: 0 auto;
-font-family: 'Futura PT', sans-serif;
+font-family: 'Montserrat', sans-serif;
 background: white;
+/* background-color: #969595; */
 /* border: 1px solid red; */
 }
 
@@ -66,11 +67,12 @@ background: white;
 
 
 header {
-    background-color: var(--light-black);
-    color: #fff;
     position: sticky;
     top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 100;
+
 }
 
 nav ul {
@@ -79,7 +81,8 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: right;
-    padding: 1rem 0;
+    text-transform: uppercase;
+    padding: 1.5rem 0;
    
 }
 
@@ -89,7 +92,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-weight: bold;
 }
 
@@ -185,14 +188,14 @@ section {
 
   .home-text {
     margin: auto;
-    max-width: 650px;
+    max-width: 600px;
     min-width: 225px;
 }
 
 .home-text h1 {
   min-width: 210px;
   max-width: 650px;
-  font-size: 6vw;
+  font-size: 5.5vw;
   margin: 0.2em 0;
   word-wrap:break-word;
   /* animation: fadeInAnimation ease 3s;
@@ -203,7 +206,7 @@ section {
 
 .home-text h3,
 .home-text p {
-  font-size: 2vw; 
+  font-size: 1.5vw; 
 }
 
 
@@ -219,6 +222,8 @@ section {
   max-width: 400px; 
   display: flex;
   align-items: center;
+  background-color: black;
+
 }
 
 
@@ -239,7 +244,7 @@ section {
     font-family: inherit;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 2px 3px rgb(0 0 0 / 0.2); 
+    box-shadow: 0 5px 5px rgb(0 0 0 / 0.2);
     overflow: hidden;
 }
 
@@ -322,6 +327,13 @@ section {
       text-align: center;
       position: relative;
     margin: 0 40px;
+    transition: all 3s ease-in-out;
+    /* border: 1px solid blue; */
+  }
+  
+  .skill-icons-slide li  :hover {
+      /* color: burlywood; */
+      transform: scale(1.1);
   }
   
   .skill-icons-slide li i {
@@ -539,4 +551,11 @@ background-color: var(--light-black);
 opacity: .5;
 }
 
+                                                    /* TEST SECTION  */
 
+#test-section {
+  background-image: url("/images/Chibs-bw-test9-removebg-preview.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
