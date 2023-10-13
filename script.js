@@ -37,28 +37,39 @@ function animateHeroMessages() {
 
   /////////////////PROJECTS
 
-const filterButtons = document.querySelectorAll(".filter-button");
+  $(document).ready(function(){
 
-filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        const filterValue = button.getAttribute("data-filter");
+    $('.category').click(function(){
 
-        const gridItems = document.querySelectorAll(".grid-item");
-        gridItems.forEach((item) => {
-            item.style.display = "none";
-        });
+        $(this).addClass('active').siblings().removeClass('active');
 
-        if (filterValue === "all") {
-            gridItems.forEach((item) => {
-              // add animation
-                item.style.display = "block";
-            });
-        } else {
-            const filteredItems = document.querySelectorAll(`.grid-item.${filterValue}`);
-            filteredItems.forEach((item) => {
-              //add animation 
-                item.style.display = "block";
-            });
+        let filter = $(this).attr('data-filter');
+
+        if(filter == 'all'){
+            $('.grid-item').show(500);
+        }
+        else{
+            $('.grid-item').not('.'+filter).hide(400);
+            $('.grid-item').filter('.'+filter).show(500);
         }
     });
+});
+
+const projectOverlayItems = document.querySelectorAll(".grid-item");
+
+projectOverlayItems.forEach((item) => {
+  const projectOverlay = item.querySelector(".project-overlay");
+
+  item.addEventListener("click", () => {
+    projectOverlay.classList.add("active");
+
+    // Prevent click events from reaching the projectOverlay content
+    projectOverlay.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  });
+
+  projectOverlay.addEventListener("click", () => {
+    projectOverlay.classList.remove("active");
+  });
 });
